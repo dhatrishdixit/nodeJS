@@ -13,6 +13,9 @@ console.log(superHero.getName());
 console.log(superHero.setName("superman"));
 console.log(superHero.getName());
 
+
+// 5 parameters that are present in the iife function that wraps every modules is 
+// 1. exports 2. require 3. module 4. __filename 5. __dirname
 // here module caching causes issue to us 
 // to get rid of it we should export class directly 
 const superHero2 = require("./superHeroClass");
