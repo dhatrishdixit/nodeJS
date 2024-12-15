@@ -7,7 +7,7 @@
 
 
 //this showcases caching in modulation 
-const superHero = require("./modules/superHeroClass");
+const superHero = require("./superHeroClass");
 
 console.log(superHero.getName());
 console.log(superHero.setName("superman"));
@@ -15,6 +15,6 @@ console.log(superHero.getName());
 
 // here module caching causes issue to us 
 // to get rid of it we should export class directly 
-const superHero2 = require("./modules/superHeroClass");
+const superHero2 = require("./superHeroClass");
 
 console.log(superHero2.getName());
