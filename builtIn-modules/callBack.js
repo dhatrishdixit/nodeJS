@@ -7,3 +7,5 @@ const higherOrderFn = (callBackFn) => {
 };
 
 higherOrderFn(callBackFn);
+
+// two types of call backs - synchronous and asynchronous
