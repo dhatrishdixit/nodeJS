@@ -17,3 +17,12 @@ console.log(path.isAbsolute("./data.json"));
 
 console.log(path.join("folder1","folder2","index.html"));
 console.log(path.join(__dirname,"index.js") == __filename);
+
+console.log(path.resolve("folder1","folder2","index.html"));
+console.log(path.resolve("/folder1","folder2","index.html"));
+console.log(path.resolve("folder1","/folder2","index.html"));
+console.log(path.resolve("/folder1","//folder2","index.html"));
+console.log(path.resolve("/folder1","//folder2","../index.html"));
+console.log(path.resolve(__dirname,"data.json"));
+
+
