@@ -1,0 +1,11 @@
+{
+    "name":"Bruce Wayne",
+    "age":36,
+    "is_married":true,
+    "hobbies": ["Reading", "Running", "Flying"],
+    "address": {
+        "street": "1234 Wayne Manor",
+        "city": "Gotham",
+        "zipcode": "54321"
+    }
+}
