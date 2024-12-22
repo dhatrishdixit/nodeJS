@@ -1,21 +1,33 @@
-const EventEmitter = require("node:events");
+const PizzaShop = require('./pizza-shop');
 
-const emitter = new EventEmitter();
+const pizzaShop = new PizzaShop();
 
-// console.log(emitter);
-
-console.log("before the work even started ");
-
-// helps us to write code in a non blocking manner 
-
-emitter.on("order-pizza",(...args)=>{
-    console.log(args);
-    const [size,topping] = args;
-    console.log(`pizza is ordered of size ${size} and with ${topping} as toppings`)
+pizzaShop.on("order",(size,topping)=>{
+    console.log(`order of ${size} with ${topping} is received`)
 })
 
-emitter.on("order-pizza",(size)=>{
-    if(size === "large") console.log("serve complementary drink")
-})
+pizzaShop.order("large","mushroom");
 
-emitter.emit("order-pizza","large","mushroom");
+
+
+// const EventEmitter = require("node:events");
+
+// const emitter = new EventEmitter();
+
+// // console.log(emitter);
+
+// console.log("before the work even started ");
+
+// // helps us to write code in a non blocking manner 
+
+// emitter.on("order-pizza",(...args)=>{
+//     console.log(args);
+//     const [size,topping] = args;
+//     console.log(`pizza is ordered of size ${size} and with ${topping} as toppings`)
+// })
+
+// emitter.on("order-pizza",(size)=>{
+//     if(size === "large") console.log("serve complementary drink")
+// })
+
+// emitter.emit("order-pizza","large","mushroom");
