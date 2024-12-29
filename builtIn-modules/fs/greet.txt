@@ -1,1 +1,1 @@
-hi this is from sync hi this is from async
+hi this is from sync hi this is from async hi this is from promisified fs
