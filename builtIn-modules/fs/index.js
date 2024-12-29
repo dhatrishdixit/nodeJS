@@ -15,8 +15,8 @@ fs.readFile("text.txt","utf-8",(err,data)=>{
 // console.log("second");
 
 
-// to write new data we use writeFile method
-fs.appendFile("greet.txt"," hi this is from async",(err)=>{
+// we can use appendFile to append data to a file
+fs.writeFile("greet.txt"," hi this is from async",{flag:"a"},(err)=>{
     if(err){
         console.log(err);
         return;
@@ -24,4 +24,4 @@ fs.appendFile("greet.txt"," hi this is from async",(err)=>{
 
     console.log("file written successfully");
 })
-fs.appendFileSync("greet.txt","hi this is from sync");
+fs.writeFileSync("greet.txt","hi this is from sync");
