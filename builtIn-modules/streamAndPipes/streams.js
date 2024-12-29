@@ -1,6 +1,5 @@
 const fs = require("node:fs");
 
-
 // buffer that stream use has a default size of 64kb
 const readableStream = fs.createReadStream("text.txt",{
     encoding: "utf-8",
