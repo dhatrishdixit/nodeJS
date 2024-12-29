@@ -9,7 +9,14 @@ const readableStream = fs.createReadStream("text.txt",{
 
 const writeableStream = fs.createWriteStream("write.txt");
 
+let charCount = 0;
 readableStream.on("data",(chunk) => {
     console.log(chunk);
-    writeableStream.write(chunk)
+    writeableStream.write(chunk);
+    // console.log(chunk.length)
+    charCount += chunk.length;
+})
+
+readableStream.on("end",()=>{
+    writeableStream.write(" "+charCount.toString());
 })
