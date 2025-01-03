@@ -1,0 +1,5 @@
+javascript is synchronous , blocking and single threaded language.
+libuv helps in making node asynchronous
+done using - 
+event loop
+thread pool
