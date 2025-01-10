@@ -13,3 +13,8 @@ for(let i=0;i<=2000000000;i++){}
 // fs.readFile execution is delayed because event loop has to check if the readFile work is done , before adding it to the queue , and this is done in io polling phase and once done the callback is added to the queue but as the context switches to check queue , io callback is then executed after the cycle only
 
 // io polling happens between io queue and check queue  
+
+// basically understand that io polling is done after passing through io queue and after this polling only callback is added to the queue
+
+// this is correct -> 
+// as readFile operation or other io is done in io polling phase and once done the callback is added to the queue and then executed in the next cycle of the event loop
